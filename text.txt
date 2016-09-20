@@ -1,2 +1,3 @@
 Hello World!
-This is my first .txt file in this repository on my remote server.
+I made some changes here, bro!
+This is my first txt file in this repository on my remote server.
