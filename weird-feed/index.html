@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#f7f4ee" />
+  <title>WTF? — Weird Temu Feed</title>
+  <meta name="description" content="A vertical entertainment feed of bizarre Temu finds." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="WTF home"><span class="brand-mark">WTF?</span><span class="brand-sub">weird things feed</span></a>
+    <div class="source-pill"><span class="live-dot"></span> TEMU SNAPSHOT</div>
+    <button id="soundBtn" class="icon-btn" aria-label="Toggle sound">◒</button>
+  </header>
+
+  <nav class="chips" id="chips" aria-label="Feed filters"></nav>
+
+  <main id="feed" class="feed" aria-live="polite"></main>
+
+  <aside class="rail" aria-hidden="true">
+    <div id="railFill" class="rail-fill"></div>
+  </aside>
+
+  <nav class="bottom-nav" aria-label="Primary navigation">
+    <button class="nav-item is-active" data-nav="feed"><span>⌁</span><small>Feed</small></button>
+    <button class="nav-item" data-nav="saved"><span>♡</span><small>Saved</small></button>
+    <button class="nav-item nav-center" data-nav="random"><span>?</span></button>
+    <button class="nav-item" data-nav="friends"><span>↗</span><small>Send</small></button>
+    <button class="nav-item" data-nav="profile"><span>☺</span><small>You</small></button>
+  </nav>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <template id="cardTemplate">
+    <section class="card">
+      <div class="product-stage">
+        <div class="noise"></div>
+        <div class="float-tag tag-a"></div>
+        <div class="float-tag tag-b"></div>
+        <div class="emoji-orb" aria-hidden="true"></div>
+        <div class="temu-corner">FOUND ON <strong>TEMU</strong></div>
+      </div>
+
+      <div class="card-overlay">
+        <div class="copy">
+          <div class="eyebrow-row">
+            <span class="category"></span>
+            <span class="rank"></span>
+          </div>
+          <h1 class="hook"></h1>
+          <p class="title"></p>
+          <div class="price-row">
+            <span class="price"></span>
+            <span class="reviews"></span>
+          </div>
+          <div class="score-row">
+            <span class="score-label">WTF SCORE</span>
+            <div class="score-track"><span class="score-fill"></span></div>
+            <strong class="score"></strong>
+          </div>
+          <p class="disclaimer">Price/listing snapshot from Temu; availability may change.</p>
+          <div class="cta-row">
+            <a class="buy" target="_blank" rel="noopener noreferrer">I NEED THIS <span>↗</span></a>
+            <button class="skip">NOPE</button>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="action like"><span>♥</span><small></small></button>
+          <button class="action save"><span>＋</span><small>save</small></button>
+          <button class="action share"><span>↗</span><small>send</small></button>
+          <button class="action why"><span>?</span><small>why</small></button>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <script src="./app.js"></script>
+</body>
+</html>
